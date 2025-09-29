@@ -23,4 +23,4 @@ services:
 
 networks:
     x01-net:
-        driver: bridge
+        external: true
