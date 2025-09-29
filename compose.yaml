@@ -1,0 +1,26 @@
+services:
+
+    ghost:
+        image: 
+            ghost:5-alpine
+        container_name: 
+            vidamoto-ghost
+        restart: 
+            always
+        ports:
+            - "2369:2368"
+        environment:
+            - url=${URL}
+            - database__client=${DATABASE__CLIENT}
+            - database__connection__host=${DATABASE__CONNECTION__HOST}
+            - database__connection__user=${DATABASE__CONNECTION__USER}
+            - database__connection__password=${DATABASE__CONNECTION__PASSWORD}
+            - database__connection__database=${DATABASE__CONNECTION__DATABASE}
+        volumes:
+            - ./volume/ghost:/var/lib/ghost/content
+        networks:
+            - x01-net
+
+networks:
+    x01-net:
+        driver: bridge
