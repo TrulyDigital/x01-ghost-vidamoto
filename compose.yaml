@@ -2,7 +2,7 @@ services:
 
     vidamoto-ghost:
         image: 
-            ghost:5-alpine
+            ghost:6.0.5-alpine
         container_name: 
             vidamoto-ghost
         restart: 
