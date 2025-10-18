@@ -16,6 +16,12 @@ services:
             - database__connection__user=${DATABASE__CONNECTION__USER}
             - database__connection__password=${DATABASE__CONNECTION__PASSWORD}
             - database__connection__database=${DATABASE__CONNECTION__DATABASE}
+            - mail__transport=${MAIL_TRANSPORT}
+            - mail__options__host=${MAIL__OPTIONS__HOST}
+            - mail__options__port=${MAIL_OPTIONS_PORT}
+            - mail__options__secure=${MAIL_OPTIONS_SECURE}
+            - mail__options__auth__user=${MAIL_OPTIONS_AUTH_USER}
+            - mail__options__auth__pass=${MAIL_OPTIONS_AUTH_PASS}
         volumes:
             - ./volume/ghost:/var/lib/ghost/content
         networks:
