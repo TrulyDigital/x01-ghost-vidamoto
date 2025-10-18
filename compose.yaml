@@ -23,7 +23,7 @@ services:
             - mail__options__auth__user=${MAIL_OPTIONS_AUTH_USER}
             - mail__options__auth__pass=${MAIL_OPTIONS_AUTH_PASS}
         volumes:
-            - ./volume/ghost:/var/lib/ghost
+            - ./volume/ghost:/var/lib/ghost/content
         networks:
             - x01-net
 
